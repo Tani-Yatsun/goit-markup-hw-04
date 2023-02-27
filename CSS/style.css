@@ -34,6 +34,10 @@ ul {
     padding: 0;
 }
 
+img {
+    display: block;
+}
+
 /* li { 
     list-style: none;
     margin: 0;
@@ -159,15 +163,22 @@ ul {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/herophoto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
 }
+
 
 
 .orderbut {
     color: var(--color-withlight);
     background-color: var(--color-brand);
     cursor: pointer;
-    border-radius: 4px;
+    /* border-radius: 4px;*/
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -194,6 +205,7 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--color-primery);
+    padding-bottom: 8px;
 
 }
 
@@ -212,12 +224,13 @@ ul {
 
 /*photo section*/
 
-.photo h2 {
+.about-job {
     font-size: 36px;
     line-height: 1.111;
     letter-spacing: 0.02em;
     color: var(--color-primery);
     text-align: center;
+    margin-bottom: 72px;
 }
 
 .photo-title {
@@ -246,6 +259,7 @@ ul {
     line-height: 1.111;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 72px;
 
 }
 
@@ -256,6 +270,9 @@ ul {
     letter-spacing: 0.02em;
     color: var(--color-primery);
     text-align: center;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    ;
 }
 
 .team-job {
@@ -264,6 +281,7 @@ ul {
     letter-spacing: 0.02em;
     color: var(--color-secondary);
     text-align: center;
+    padding-bottom: 8px;
 }
 
 
@@ -274,14 +292,62 @@ ul {
     gap: 24px;
     justify-content: center;
 
+
 }
 
 
 
 .team-photo {
     flex-basis: calc((100%-3*24px)/4);
-    border-radius: 0px 0px 4px 4px
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+/*social*/
+
+.social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.social-link:hover {
+    fill: var(--color-pressed);
+}
+
+
+.social-list {
+    padding-bottom: 32px;
+    display: flex;
+    gap: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+
+}
+
+.social-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: var(--color-firstlight);
+
+}
+
+
+
 
 .section-team {
     background-color: var(--color-firstlight);
@@ -411,6 +477,6 @@ ul {
     border-left: 1px solid var(--color-border);
     border-right: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
-    padding: 32px 0 0 16px;
+    padding: 32px 0 32px 16px;
 
 }
