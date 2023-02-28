@@ -8,6 +8,7 @@
     --color-withlight: #ffff;
     --color-pressed: #404bbf;
     --color-border: #E7E9FC;
+    --color-customers-color: #8E8F99;
 }
 
 body {
@@ -178,7 +179,7 @@ img {
     color: var(--color-withlight);
     background-color: var(--color-brand);
     cursor: pointer;
-    /* border-radius: 4px;*/
+    border-radius: 4px;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -219,6 +220,29 @@ img {
 .title-container {
     display: flex;
     gap: 24px;
+    justify-content: center;
+
+}
+
+.title-box {
+    width: 264px;
+    height: 112px;
+    background-color: var(--color-firstlight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding-bottom: 8px;
+}
+
+.title.row:not(:last-child) {
+    margin-right: 24px;
+}
+
+.title-icon {
+    fill: var(--color-primery);
+    width: 60px;
+    height: 64px;
 }
 
 
@@ -313,7 +337,6 @@ img {
 }
 
 .social-link {
-    display: block;
     width: 100%;
     height: 100%;
     background-color: var(--color-brand);
@@ -324,7 +347,8 @@ img {
 }
 
 .social-link:hover {
-    fill: var(--color-pressed);
+    /* fill: var(--color-pressed); */
+    background-color: var(--color-pressed);
 }
 
 
@@ -339,7 +363,7 @@ img {
 }
 
 .social-icon {
-    display: block;
+    /*display: block;*/
     width: 16px;
     height: 16px;
     fill: var(--color-firstlight);
@@ -363,16 +387,15 @@ img {
 
 .foter-item {
     padding-top: 16px;
-}
-
-
-.foot p {
     width: 266px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-secondlight);
+
 }
+
+
 
 .footer-logo {
     font-family: Raleway, sans-serif;
@@ -380,7 +403,6 @@ img {
     color: var(--color-brand);
     font-size: 18px;
     font-weight: 800;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
     line-height: 1.174;
 
@@ -394,6 +416,55 @@ img {
     letter-spacing: 0.03em;
     line-height: 1.174;
 }
+
+.footer {
+    display: flex;
+    gap: 120px;
+
+}
+
+.footer-social-item {
+    color: var(--color-withlight);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+
+}
+
+.footer-social-row {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+.footer-social-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primery);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.footer-social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: right;
+
+
+}
+
+.footer-social-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-firstlight);
+}
+
 
 /*section buttons rows*/
 
@@ -458,6 +529,44 @@ img {
     color: var(--color-secondary);
 }
 
+/*customers*/
+
+.customers-title {
+    font-size: 36px;
+    line-height: 1.111;
+    letter-spacing: 0.002em;
+    color: var(--color-primery);
+    text-align: center;
+    margin-bottom: 72px;
+
+}
+
+.customers-box {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-content: center;
+}
+
+.customers-row {
+    width: 168px;
+    height: 88px;
+    border-radius: 4px;
+    border: 1px solid var(--color-customers-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.customers-icon {
+    width: 104px;
+    height: 56px;
+    fill: var(--color-customers-color);
+   
+}
+
+
+
+
 /*servises section*/
 
 .servises {
@@ -469,6 +578,7 @@ img {
 
 .servises-photo {
     flex-basis: calc((100% - 2 * 24px) / 3);
+    cursor: pointer;
 
 }
 
@@ -478,5 +588,11 @@ img {
     border-right: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     padding: 32px 0 32px 16px;
+ 
 
+}
+.servises-items:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
