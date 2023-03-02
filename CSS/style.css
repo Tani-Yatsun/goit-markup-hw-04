@@ -8,7 +8,9 @@
     --color-withlight: #ffff;
     --color-pressed: #404bbf;
     --color-border: #E7E9FC;
-    --color-customers-color: #8E8F99;
+    --color-button-footer:#31D0AA;
+    --color-customers-border: #8E8F99;
+   
 }
 
 body {
@@ -46,12 +48,21 @@ img {
     text-decoration: none;
 }*/
 
-.section {
-    padding: 120px 0;
+.section-title {
+    padding-bottom: 120px;
+    padding-top: 120px;
 }
 
 .section-team {
-    padding: 120px 0;
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+.section-photo {
+    padding-bottom: 120px;
+}
+.section-customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .container {
@@ -63,6 +74,9 @@ img {
 }
 
 /*header*/
+.header {
+    border: 1px solid var(--color-border);
+}
 
 .logo {
     font-family: Raleway, sans-serif;
@@ -104,7 +118,14 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
 
-
+}
+.navi-row ::after {
+   content: ''; 
+   width: 64px;
+   height: 4px;
+   display: block;
+   border-radius: 4px;
+   color: var(--color-pressed);
 }
 
 .navilinks a:hover {
@@ -160,6 +181,7 @@ img {
 
 
 .hero {
+
     background-color: var(--color-secondary);
     padding-top: 188px;
     padding-bottom: 188px;
@@ -169,7 +191,8 @@ img {
         url(../images/herophoto.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+
+
 
 }
 
@@ -186,6 +209,7 @@ img {
     letter-spacing: 0.04em;
     text-align: center;
     padding: 16px 32px;
+    border: none;
 
 
 }
@@ -221,6 +245,7 @@ img {
     display: flex;
     gap: 24px;
     justify-content: center;
+    flex-basis:calc((100% - 3 * 24px) / 4) ;
 
 }
 
@@ -232,7 +257,7 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .title.row:not(:last-child) {
@@ -265,7 +290,7 @@ img {
 }
 
 .image-title {
-    flex-basis: calc((100%-2*24px)/3);
+    flex-basis: calc((100%-2 * 24px) / 3);
 
 
 }
@@ -350,6 +375,9 @@ img {
     /* fill: var(--color-pressed); */
     background-color: var(--color-pressed);
 }
+.social-link:focus {
+    background-color: var(--color-pressed);
+}
 
 
 .social-list {
@@ -405,6 +433,7 @@ img {
     font-weight: 800;
     letter-spacing: 0.03em;
     line-height: 1.174;
+    text-transform: uppercase;
 
 }
 
@@ -419,8 +448,9 @@ img {
 
 .footer {
     display: flex;
-    gap: 120px;
-
+}
+.logo-box {
+    margin-right: 120px;
 }
 
 .footer-social-item {
@@ -449,6 +479,9 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+}
+.footer-social-link:hover  {
+background-color: var(--color-button-footer);
 }
 
 .footer-social-list {
@@ -551,22 +584,36 @@ img {
 .customers-row {
     width: 168px;
     height: 88px;
+} 
+
+.customers-link {
+    width: 100%;
+    height: 100%;
     border-radius: 4px;
-    border: 1px solid var(--color-customers-color);
+    border: 1px solid var(--color-customers-border);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.customers-icon {
-    width: 104px;
-    height: 56px;
-    fill: var(--color-customers-color);
-   
+.customers-link:hover,
+.customers-link:focus {
+    border: 1px solid var(--color-pressed);
+
 }
 
 
+.customers-icon {
+    width: 104px;
+    height: 56px;
+    fill: var(--color-customers-border);
+   
+}
 
+.customers-icon:hover,
+.customers-icon:focus {
+fill: var(--color-pressed);
 
+}
 /*servises section*/
 
 .servises {
@@ -577,9 +624,15 @@ img {
 }
 
 .servises-photo {
+    display: flex;
     flex-basis: calc((100% - 2 * 24px) / 3);
     cursor: pointer;
 
+}
+.servises-photo:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .servises-items {
@@ -589,10 +642,10 @@ img {
     border-bottom: 1px solid var(--color-border);
     padding: 32px 0 32px 16px;
  
-
 }
-.servises-items:hover {
+
+/*.servises-link:hover  {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+}*/
