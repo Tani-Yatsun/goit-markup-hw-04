@@ -529,11 +529,11 @@ background-color: var(--color-button-footer);
 
 }
 
-.btn:hover {
+.btn-link:hover {
     background-color: var(--color-brand);
     color: var(--color-withlight);
 }
-
+.btn.hover,
 .btn:focus {
     background-color: var(--color-brand);
     color: var(--color-withlight);
@@ -626,7 +626,7 @@ fill: var(--color-pressed);
 .servises-photo {
     display: flex;
     flex-basis: calc((100% - 2 * 24px) / 3);
-    cursor: pointer;
+
 
 }
 .servises-photo:hover {
