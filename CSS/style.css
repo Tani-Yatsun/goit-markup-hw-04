@@ -428,7 +428,7 @@ img {
 .footer-logo {
     font-family: Raleway, sans-serif;
     text-decoration: none;
-    color: var(--color-brand);
+    color: var(--color-firstlight);
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 0.03em;
@@ -438,7 +438,7 @@ img {
 }
 
 .footer-name {
-    color: var(--color-firstlight);
+    color: var(--color-brand);
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 800;
@@ -519,11 +519,9 @@ background-color: var(--color-button-footer);
     background-color: var(--color-firstlight);
     border-radius: 4px;
     border-color: var(--color-secondlight);
-    border-width: thin;
     cursor: pointer;
     font-family: roboto;
     color: var(--color-brand);
-    list-style: none;
     line-height: 1.5;
     letter-spacing: 0.04em;
     padding: 12px 24px;
@@ -534,6 +532,7 @@ background-color: var(--color-button-footer);
 .btn:focus {
     background-color: var(--color-brand);
     color: var(--color-withlight);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -548,8 +547,8 @@ background-color: var(--color-button-footer);
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--color-primery);
-    padding-bottom: 8px;
-    margin: 0;
+    margin-bottom: 8px;
+   
 }
 
 .section-rows p {
@@ -589,6 +588,7 @@ background-color: var(--color-button-footer);
     height: 100%;
     border-radius: 4px;
     border: 1px solid var(--color-customers-border);
+    color: var(--color-customers-border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -597,21 +597,17 @@ background-color: var(--color-button-footer);
 .customers-link:hover,
 .customers-link:focus {
     border: 1px solid var(--color-pressed);
+    color: var(--color-pressed);
 }
 
 
 .customers-icon {
     width: 104px;
     height: 56px;
-    fill: var(--color-customers-border);
-   
+    fill: currentColor;
+  
 }
 
-.customers-icon:hover,
-.customers-icon:focus {
-fill: var(--color-pressed);
-
-}
 /*servises section*/
 
 .servises {
@@ -636,9 +632,13 @@ fill: var(--color-pressed);
     padding: 32px 0 32px 16px;
  
 }
+.servises-link {
+    text-decoration: none;
+    display: block;
+}
 
-/*.servises-link:hover  {
+.servises-link:hover  {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-}*/
+}
